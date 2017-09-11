@@ -1,22 +1,35 @@
-# Compiled class file
+# Generic files to ignore
 *.class
 
-# Log file
-*.log
+# Eclipse
+.classpath
+.project
+.settings/
 
-# BlueJ files
-*.ctxt
+# Intellij
+.idea/
+*.iml
+*.iws
 
-# Mobile Tools for Java (J2ME)
-.mtj.tmp/
+# Mac
+.DS_Store
 
-# Package Files #
+# Maven
+log/
+target/
+
+# Gradle
+.gradle/
+build/
+classes/
+
+# Package Files
 *.jar
 *.war
 *.ear
-*.zip
-*.tar.gz
-*.rar
 
-# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+# File
+*.csv
+*.log
+# Virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
 hs_err_pid*
