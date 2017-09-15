@@ -1,9 +1,6 @@
 package www.j1stiot.cn.thread;
 
-import www.j1stiot.cn.thread.entity.CallableDemo;
-import www.j1stiot.cn.thread.entity.JoinDemo;
-import www.j1stiot.cn.thread.entity.RunnableDemo;
-import www.j1stiot.cn.thread.entity.ThreadDemo;
+import www.j1stiot.cn.thread.entity.*;
 
 import java.util.concurrent.FutureTask;
 
@@ -41,7 +38,14 @@ public class ThreadApplication {
                     e.printStackTrace();
                 }
             }
-
         }
+
+        // 线程调用start()和run()方法的区别
+        Thread t=new Thread(new StartAndRunDemo());
+        t.run();
+        t.start();
+        System.out.print("begin");
+
+
     }
 }
