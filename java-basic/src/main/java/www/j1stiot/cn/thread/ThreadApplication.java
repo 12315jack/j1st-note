@@ -6,6 +6,17 @@ import java.util.concurrent.FutureTask;
 
 /**
  * Thread demo
+ *
+ * 线程的创建方式：
+ *
+ *  1.实现 Runnable 接口,覆盖 run() 方法,无返回值
+ *
+ *  2.继承 Thread 接口,覆盖 run() 方法
+ *
+ *  3.实现 Callable 接口,覆盖 call() 方法,call方法可以有返回值
+ *
+ *
+ *
  */
 public class ThreadApplication {
 
