@@ -3,6 +3,7 @@
 java 基础：
 
 1.常见名词解释？
+
     OOA: Object-Oriented Analysis-面向对象分析
     OOD: Object-Oriented Design-面向对象设计
     OOP: Object-Oriented Programming-面向对象编程
@@ -11,6 +12,7 @@ java 基础：
     SOA: Service-Oriented Architecture-面向服务的体系结构
 
 2.Java支持的数据类型有哪些？
+
      1.基本数据类型：
         byte(1) 		short(2)		 int(4) 		long(8)
         float(4) 		double(8) 	 	 char(2) 		Boolean(true/false)
@@ -29,6 +31,7 @@ java 基础：
 
 
 3.Java中方法重载、方法覆盖？
+
     1.方法重载：
 	    方法重载发生在同一个类里面，是指有两个或者两个以上的方法，它们的方法名相同但是参数类型和个数不同，返回值可相同也可不同的方法，重载是一个类中多态性的表现
 
@@ -41,6 +44,7 @@ java 基础：
         方法覆盖与实现接口的方法原理很相似，覆盖父类方法，要求比较严格
 
 4.Java基类是什么？有哪些方法？
+
 	基类：Object
 	常用方法：
             toString();	//将对象转换成string
@@ -53,6 +57,7 @@ java 基础：
 		…
 
 5. String,StringBuffer, StringBuilder 的区别是什么？
+
     1.String是字符串常量，StringBuffer和StringBuilder都是字符串变量。后两者的字符内容可变，而前者创建后内容不可变。
     2.String不可变是因为在JDK中String类被声明为一个final类。
     3.StringBuffer是线程安全的，而StringBuilder是非线程安全的。
