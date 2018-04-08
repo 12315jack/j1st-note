@@ -147,7 +147,7 @@ Java development history：
 
     Java 7 features:
 
-        1，switch中可以使用字串了
+        1.switch中可以使用字串了
 
             String s = "test";
             switch (s) {
@@ -161,7 +161,7 @@ Java development history：
             break ;
             }
 
-        2，"<>"这个玩意儿的运用List<String> tempList = new ArrayList<>(); 即泛型实例化类型自动推断。
+        2."<>"这个玩意儿的运用List<String> tempList = new ArrayList<>(); 即泛型实例化类型自动推断。
 
             mport java.util.*;
             public class JDK7GenericTest {
@@ -253,7 +253,7 @@ Java development history：
 
             boolean Character.equalsIgnoreCase(char ch1, char ch2)
 
-        7，安全的加减乘除
+        7.安全的加减乘除
 
             int Math.safeToInt(long value)
             int Math.safeNegate(int value)
@@ -269,140 +269,134 @@ Java development history：
             int Math.safeSubtract(int value1, int value2)
 
 
-        1.对Java集合（Collections）的增强支持
-        在JDK1.7之前的版本中，Java集合容器中存取元素的形式如下：
-        以List、Set、Map集合容器为例：
+        8.对Java集合（Collections）的增强支持
+            1.在JDK1.7之前的版本中，Java集合容器中存取元素的形式如下：
+                以List、Set、Map集合容器为例：
 
-            //创建List接口对象
-            List<String> list=new ArrayList<String>();
-            list.add("item"); //用add()方法获取对象
-            String Item=list.get(0); //用get()方法获取对象
+                //创建List接口对象
+                List<String> list=new ArrayList<String>();
+                list.add("item"); //用add()方法获取对象
+                String Item=list.get(0); //用get()方法获取对象
 
-            //创建Set接口对象
-            Set<String> set=new HashSet<String>();
-            set.add("item"); //用add()方法添加对象
+                //创建Set接口对象
+                Set<String> set=new HashSet<String>();
+                set.add("item"); //用add()方法添加对象
 
-            //创建Map接口对象
-            Map<String,Integer> map=new HashMap<String,Integer>();
-            map.put("key",1); //用put()方法添加对象
-            int value=map.get("key");
+                //创建Map接口对象
+                Map<String,Integer> map=new HashMap<String,Integer>();
+                map.put("key",1); //用put()方法添加对象
+                int value=map.get("key");
 
-        在JDK1.7中，摒弃了Java集合接口的实现类，如：ArrayList、HashSet和HashMap。而是直接采用[]、{}的形式存入对象，采用[]的形式按照索引、键值来获取集合中的对象，如下：
+                在JDK1.7中，摒弃了Java集合接口的实现类，如：ArrayList、HashSet和HashMap。而是直接采用[]、{}的形式存入对象，采用[]的形式按照索引、键值来获取集合中的对象，如下：
+                    List<String> list=["item"]; //向List集合中添加元素
+                    String item=list[0]; //从List集合中获取元素
+                    Set<String> set={"item"}; //向Set集合对象中添加元素
+                    Map<String,Integer> map={"key":1}; //向Map集合中添加对象
+                    int value=map["key"]; //从Map集合中获取对象
 
-
-              List<String> list=["item"]; //向List集合中添加元素
-              String item=list[0]; //从List集合中获取元素
-
-              Set<String> set={"item"}; //向Set集合对象中添加元素
-
-              Map<String,Integer> map={"key":1}; //向Map集合中添加对象
-              int value=map["key"]; //从Map集合中获取对象
-
-        2.在Switch中可用String
-        在之前的版本中是不支持在Switch语句块中用String类型的数据的，这个功能在C#语言中早已被支持，好在JDK1.7中加入了。
-
-        String s = "test";
-                switch (s) {
-                      case "test" :
-                     System.out.println("test");
-                case "test1" :
-                     System.out.println("test1");
-                     break ;
-                  default :
-                          System.out.println("break");
-                          break ;
-        }
+            2.在Switch中可用String
+                在之前的版本中是不支持在Switch语句块中用String类型的数据的，这个功能在C#语言中早已被支持，好在JDK1.7中加入了。
+                String s = "test";
+                        switch (s) {
+                              case "test" :
+                             System.out.println("test");
+                        case "test1" :
+                             System.out.println("test1");
+                             break ;
+                          default :
+                                  System.out.println("break");
+                                  break ;
+                }
 
 
-        3.数值可加下划线
-            例如：int one_million = 1_000_000;
+            3.数值可加下划线
+                例如：int one_million = 1_000_000;
 
-        4.支持二进制文字
-            例如：int binary = 0b1001_1001;
+            4.支持二进制文字
+                例如：int binary = 0b1001_1001;
 
-        5.简化了可变参数方法的调用
-            当程序员试图使用一个不可具体化的可变参数并调用一个*varargs* （可变）方法时，编辑器会生成一个“非安全操作”的警告。
+            5.简化了可变参数方法的调用
+                当程序员试图使用一个不可具体化的可变参数并调用一个*varargs* （可变）方法时，编辑器会生成一个“非安全操作”的警告。
 
-        6、在try catch异常扑捉中，一个catch可以写多个异常类型，用"|"隔开，
+            6、在try catch异常扑捉中，一个catch可以写多个异常类型，用"|"隔开，
 
-            jdk7之前：
-            try {
-               ......
-            } catch(ClassNotFoundException ex) {
-               ex.printStackTrace();
-            } catch(SQLException ex) {
-               ex.printStackTrace();
-            }
+                jdk7之前：
+                try {
+                   ......
+                } catch(ClassNotFoundException ex) {
+                   ex.printStackTrace();
+                } catch(SQLException ex) {
+                   ex.printStackTrace();
+                }
 
-            jdk7例子如下
-            try {
-               ......
-            } catch(ClassNotFoundException|SQLException ex) {
-               ex.printStackTrace();
-            }
+                jdk7例子如下
+                try {
+                   ......
+                } catch(ClassNotFoundException|SQLException ex) {
+                   ex.printStackTrace();
+                }
 
-        7、jdk7之前，你必须用try{}finally{}在try内使用资源，在finally中关闭资源，不管try中的代码是否正常退出或者异常退出。jdk7之后，你可以不必要写finally语句来关闭资源，只要你在try()的括号内部定义要使用的资源。请看例子：
+            7、jdk7之前，你必须用try{}finally{}在try内使用资源，在finally中关闭资源，不管try中的代码是否正常退出或者异常退出。jdk7之后，你可以不必要写finally语句来关闭资源，只要你在try()的括号内部定义要使用的资源。请看例子：
 
-         jdk7之前:
-            import java.io.*;
-            // Copy from one file to another file character by character.
-            // Pre-JDK 7 requires you to close the resources using a finally block.
-            public class FileCopyPreJDK7 {
-               public static void main(String[] args) {
-                  BufferedReader in = null;
-                  BufferedWriter out = null;
-                  try {
-                     in  = new BufferedReader(new FileReader("in.txt"));
-                     out = new BufferedWriter(new FileWriter("out.txt"));
-                     int charRead;
-                     while ((charRead = in.read()) != -1) {
-                        System.out.printf("%c ", (char)charRead);
-                        out.write(charRead);
-                     }
-                  } catch (IOException ex) {
-                     ex.printStackTrace();
-                  } finally {            // always close the streams
-                     try {
-                        if (in != null) in.close();
-                        if (out != null) out.close();
-                     } catch (IOException ex) {
-                        ex.printStackTrace();
-                     }
-                  }
+             jdk7之前:
+                import java.io.*;
+                // Copy from one file to another file character by character.
+                // Pre-JDK 7 requires you to close the resources using a finally block.
+                public class FileCopyPreJDK7 {
+                   public static void main(String[] args) {
+                      BufferedReader in = null;
+                      BufferedWriter out = null;
+                      try {
+                         in  = new BufferedReader(new FileReader("in.txt"));
+                         out = new BufferedWriter(new FileWriter("out.txt"));
+                         int charRead;
+                         while ((charRead = in.read()) != -1) {
+                            System.out.printf("%c ", (char)charRead);
+                            out.write(charRead);
+                         }
+                      } catch (IOException ex) {
+                         ex.printStackTrace();
+                      } finally {            // always close the streams
+                         try {
+                            if (in != null) in.close();
+                            if (out != null) out.close();
+                         } catch (IOException ex) {
+                            ex.printStackTrace();
+                         }
+                      }
 
-                  try {
-                     in.read();   // Trigger IOException: Stream closed
-                  } catch (IOException ex) {
-                     ex.printStackTrace();
-                  }
-               }
-            }
+                      try {
+                         in.read();   // Trigger IOException: Stream closed
+                      } catch (IOException ex) {
+                         ex.printStackTrace();
+                      }
+                   }
+                }
 
-        jdk7之后
-            import java.io.*;
-            // Copy from one file to another file character by character.
-            // JDK 7 has a try-with-resources statement, which ensures that
-            // each resource opened in try() is closed at the end of the statement.
-            public class FileCopyJDK7 {
-               public static void main(String[] args) {
-                  try (BufferedReader in  = new BufferedReader(new FileReader("in.txt"));
-                       BufferedWriter out = new BufferedWriter(new FileWriter("out.txt"))) {
-                     int charRead;
-                     while ((charRead = in.read()) != -1) {
-                        System.out.printf("%c ", (char)charRead);
-                        out.write(charRead);
-                     }
-                  } catch (IOException ex) {
-                     ex.printStackTrace();
-                  }
-               }
-            }
+            jdk7之后
+                import java.io.*;
+                // Copy from one file to another file character by character.
+                // JDK 7 has a try-with-resources statement, which ensures that
+                // each resource opened in try() is closed at the end of the statement.
+                public class FileCopyJDK7 {
+                   public static void main(String[] args) {
+                      try (BufferedReader in  = new BufferedReader(new FileReader("in.txt"));
+                           BufferedWriter out = new BufferedWriter(new FileWriter("out.txt"))) {
+                         int charRead;
+                         while ((charRead = in.read()) != -1) {
+                            System.out.printf("%c ", (char)charRead);
+                            out.write(charRead);
+                         }
+                      } catch (IOException ex) {
+                         ex.printStackTrace();
+                      }
+                   }
+                }
 
 
     Java 8 features:
 
         1.接口的默认方法
-
             Java 8允许我们给接口添加一个非抽象的方法实现，只需要使用 default关键字即可，这个特征又叫做扩展方法，示例如下：
              代码如下:
 
@@ -429,7 +423,6 @@ Java development history：
         译者注： 在Java中只有单继承，如果要让一个类赋予新的特性，通常是使用接口来实现，在C++中支持多继承，允许一个子类同时具有多个父类的接口与功能，在其他 语言中，让一个类同时具有其他的可复用代码的方法叫做mixin。新的Java 8 的这个特新在编译器实现的角度上来说更加接近Scala的trait。 在C#中也有名为扩展方法的概念，允许给已存在的类型扩展方法，和Java 8的这个在语义上有差别。
 
         2.Lambda 表达式
-
             首先看看在老版本的Java中是如何排列字符串的：
             复制代码 代码如下:
 
@@ -461,7 +454,6 @@ Java development history：
         Java编译器可以自动推导出参数类型，所以你可以不用再写一次类型。接下来我们看看lambda表达式还能作出什么更方便的东西来：
 
         3.函数式接口
-
             Lambda 表达式是如何在java的类型系统中表示的呢？每一个lambda表达式都对应一个类型，通常是接口类型。而“函数式接口”是指仅仅只包含一个抽象方法的 接口，每一个该类型的lambda表达式都会被匹配到这个抽象方法。因为 默认方法 不算抽象方法，所以你也可以给你的函数式接口添加默认方法。
             我们可以将lambda表达式当作任意只包含一个抽象方法的接口类型，确保你的接口一定达到这个要求，你只需要给你的接口添加 @FunctionalInterface 注解，编译器如果发现你标注了这个注解的接口有多于一个抽象方法的时候会报错的。
             示例如下：
@@ -477,7 +469,8 @@ Java development history：
 
             需要注意如果@FunctionalInterface如果没有指定，上面的代码也是对的。
             译者注 将lambda表达式映射到一个单方法的接口上，这种做法在Java 8之前就有别的语言实现，比如Rhino JavaScript解释器，如果一个函数参数接收一个单方法的接口而你传递的是一个function，Rhino 解释器会自动做一个单接口的实例到function的适配器，典型的应用场景有 org.w3c.dom.events.EventTarget 的addEventListener 第二个参数 EventListener。
-            四、方法与构造函数引用
+
+        4.方法与构造函数引用
             前一节中的代码还可以通过静态方法引用来表示：
             复制代码 代码如下:
 
@@ -810,7 +803,6 @@ Java development history：
         Merge做的事情是如果键名不存在则插入，否则则对原键对应的值做合并操作并重新插入到map中。
 
        9.Date API
-
             Java 8 在包java.time下包含了一组全新的时间日期API。新的日期API和开源的Joda-Time库差不多，但又不完全一样，下面的例子展示了这组新API里最重要的一些部分：
             Clock 时钟
             Clock类提供了访问当前日期和时间的方法，Clock是时区敏感的，可以用来取代 System.currentTimeMillis() 来获取当前的微秒数。某一个特定的时间点也可以使用Instant类来表示，Instant类也可以用来创建老的java.util.Date对象。
