@@ -65,8 +65,8 @@ java 基础：
 
 6.请说明 equals() 和 hashCode() 的关系、何时会使用这两个方法？如何正确的Override这两个方法？
 
-    1.	equals值相等，则hashcode值一定相等
-    2.	hashcode值相等，equals值不一定相等
+    1.equals值相等，则hashcode值一定相等
+    2.hashcode值相等，equals值不一定相等
         如果只覆盖了equals而没有覆盖hashCode, 则两个不同的instance a和b虽然equals结果(业务逻辑上)相等,但却会有不同的hashcode,这样
         hashmap里面会同时存在a和b,而实际上我们需要hashmap里面只能保存其中一个,因为从业务逻辑方向看它们是相等的
     拓展知识：
@@ -102,32 +102,31 @@ java 基础：
         p.setName("test");
     }
 
-
     解答要点：
-    1.	代码有错误
-    2.	错误原因：test应该放到类Person体里面
-    3.	Final关键字的使用：
-    1.	final修饰的类不可被继承
-    2.	final 对于常量来说，只能被赋值一次，意味着值不能改变，例如 final int i=100。这个i的值永远都是100。
-    3.	final对于变量来说，只是标识这个引用值不可被改变；
+    1.代码有错误
+    2.错误原因：test应该放到类Person体里面
+    3.Final关键字的使用：
+        1.final修饰的类不可被继承
+        2.final 对于常量来说，只能被赋值一次，意味着值不能改变，例如 final int i=100。这个i的值永远都是100。
+        3.final对于变量来说，只是标识这个引用值不可被改变；
     例如:本例子的final Person person,那么这个person引用一定是不能被改变的，但是应用对象的属性值是可以改变的
     形象的比喻：一个女子定义了一个final的老公，这个老公的职业和收入都是允许改变的，只是这个女人不会换老公而已。
-    4.	Sting就是一个被final修饰的类，我们只能用，不用继承
-    5.	注意final和finally的区别，final是修饰类或者变量，finally是在异常处理中使用，如：try{ }catch（）{}finally{}中，finally的作用一般用于必须处理的事情，如关闭连接
+        4.Sting就是一个被final修饰的类，我们只能用，不用继承
+        5.注意final和finally的区别，final是修饰类或者变量，finally是在异常处理中使用，如：try{ }catch（）{}finally{}中，
+          finally的作用一般用于必须处理的事情，如关闭连接
 
 
 8.请说明什么是 checked exception
 
     解答要点：
-    Java主要包含两大异常：checked异常和unchecked异常。checked和unchecked异常之间的区别是：
-    1.Checked异常必须被显式地捕获或者传递，而unchecked异常则可以不必捕获或抛出。
-    2. Checked异常继承java.lang.Exception类，Unchecked异常继承自java.lang.RuntimeException类。
-
-        3. Unchecked异常一般在运行期间才能被检查出来，Checked在编译时就能确定，一般运行期异常不需要处理，Checked异常需要自己处理
-        4.捕获异常的方式有：Try{}catch(Exception e){}finally{}，throws Ecxeption
-        5.常见的Unchecked 异常：
-    NullPointException, IllegalArgumentException/ClassCastException/OutOfMemoryException/NumberFormatException
-    等等
+    Java主要包含两大异常：
+        checked异常和unchecked异常。
+        checked和unchecked异常之间的区别是：
+            1.Checked异常必须被显式地捕获或者传递，而unchecked异常则可以不必捕获或抛出。
+            2. Checked异常继承java.lang.Exception类，Unchecked异常继承自java.lang.RuntimeException类。
+            3. Unchecked异常一般在运行期间才能被检查出来，Checked在编译时就能确定，一般运行期异常不需要处理，Checked异常需要自己处理
+            4.捕获异常的方式有：Try{}catch(Exception e){}finally{}，throws Ecxeption
+            5.常见的Unchecked 异常：NullPointException, IllegalArgumentException/ClassCastException/OutOfMemoryException/NumberFormatException等等
 
 
 9.请简要说明你所熟知的设计模式?
