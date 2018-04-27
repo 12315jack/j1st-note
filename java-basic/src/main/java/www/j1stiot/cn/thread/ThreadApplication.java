@@ -1,6 +1,6 @@
 package www.j1stiot.cn.thread;
 
-import www.j1stiot.cn.thread.entity.*;
+import www.j1stiot.cn.thread.resources.*;
 
 import java.util.concurrent.FutureTask;
 

@@ -1,4 +1,4 @@
-package www.j1stiot.cn.thread.entity;
+package www.j1stiot.cn.thread.resources;
 
 /**
  *
