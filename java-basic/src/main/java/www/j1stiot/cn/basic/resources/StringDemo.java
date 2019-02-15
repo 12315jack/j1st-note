@@ -19,6 +19,8 @@ public class StringDemo {
     public static void main(String[] args) {
 
         String str1 = "hello";
+        StringBuffer stringBuffer = new StringBuffer("hello");
+        StringBuilder stringBuilder = new StringBuilder("hello");
 
         // 对象地址值比较
         String str2 = new String("hello");

@@ -49,9 +49,9 @@ java 基础：
 
 	1.基类：Object
 	2.常用方法：
-        toString();	//将对象转换成string
-        equals(); 	//Object比较引用地址值，子类如String类比较对象值
-        native hashcode(); // hashcode值，每个对象值唯一
+        toString();	        //将对象转换成string
+        equals(); 	        //Object比较引用地址值，子类如String类比较对象值
+        native hashcode();  // hashcode值，每个对象值唯一
         native clone();
         native notify()
         notifyAll()

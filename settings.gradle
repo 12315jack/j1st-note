@@ -1,4 +1,5 @@
 rootProject.name = 'j1st-note'
 
 include 'java-basic'
+include 'java-database'
 

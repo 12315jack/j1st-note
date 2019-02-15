@@ -7,7 +7,7 @@ subprojects {
     group 'www.j1stiot.cn'
 
     // Version
-    version '1.0.0-SNAPSHOT'
+    version 'V1.0.0'
 
     // JDK
     sourceCompatibility = 1.8
