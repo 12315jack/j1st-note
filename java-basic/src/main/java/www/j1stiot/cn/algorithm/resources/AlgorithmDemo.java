@@ -103,8 +103,8 @@ public class AlgorithmDemo {
      * 选择排序算法
      * <p>
      * 在未排序序列中找到最小元素，存放到排序序列的起始位置
-     * 再从剩余未排序元素中继续寻找最小元素，然后放到排序序列末尾。
-     * 以此类推，直到所有元素均排序完毕。
+     * 再从剩余未排序元素中继续寻找最小元素，然后放到排序序列末尾
+     * 以此类推，直到所有元素均排序完毕
      *
      * @param numbers 待排序数组
      */
@@ -168,7 +168,6 @@ public class AlgorithmDemo {
      * 第一次后increment的值变为3/2=1,此时对数组进行插入排序，
      * 实现数组从大到小排
      */
-
     public static void shellSort(int[] data) {
         int j = 0;
         int temp = 0;
