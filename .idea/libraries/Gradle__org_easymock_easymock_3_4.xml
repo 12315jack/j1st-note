@@ -2,8 +2,11 @@
   <library name="Gradle: org.easymock:easymock:3.4">
     <CLASSES>
       <root url="jar://$MAVEN_REPOSITORY$/org/easymock/easymock/3.4/easymock-3.4.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.easymock/easymock/3.4/9fdeea183a399f25c2469497612cad131e920fa3/easymock-3.4.jar!/" />
     </CLASSES>
     <JAVADOC />
-    <SOURCES />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/org.easymock/easymock/3.4/138cb4dfced5e4536b8300ae71f673b84b00c7f9/easymock-3.4-sources.jar!/" />
+    </SOURCES>
   </library>
 </component>
