@@ -18,7 +18,7 @@
 
     例子：
         '''
-        ^Croot@iZuf6fs05owv18qnxn8t75Z:/home/application/M2M/smart-charger-m2m-1.0.0-SNAPSHOT# jps
+        root@iZuf6fs05owv18qnxn8t75Z:/home/application/M2M/smart-charger-m2m-1.0.0-SNAPSHOT# jps
         21779 SmartChargerM2M
         26667 Jps
         '''
