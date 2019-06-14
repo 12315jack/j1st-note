@@ -1,6 +1,6 @@
 
 
-#jvm jstat 使用方法:
+#jvm jstat 用法:
 
     Jstat是JDK自带的一个轻量级工具，主要用JVM内建的指令对java应用程序的资源和性能进行实时的监控。
 

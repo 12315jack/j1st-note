@@ -1,5 +1,5 @@
 
-#jps:
+#jvm jps 用法:
     Java版的ps命令，查看java进程及其相关的信息，如果你想找到一个java进程的pid，那可以用jps命令替代linux中的ps命令了，简单而方便。
     命令格式：
 

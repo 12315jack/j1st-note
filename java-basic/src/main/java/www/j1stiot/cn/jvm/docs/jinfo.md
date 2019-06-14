@@ -1,5 +1,5 @@
 
-#jinfo:
+#jvm jinfo 用法:
     jinfo是用来查看JVM参数和动态修改部分JVM参数的命令
 
     命令格式：jinfo [option] <pid>
