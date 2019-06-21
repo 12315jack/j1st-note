@@ -1,11 +1,13 @@
 package www.j1stiot.cn.concurrency.example.singleton;
 
-import com.mmall.concurrency.annoations.NotRecommend;
-import com.mmall.concurrency.annoations.ThreadSafe;
+
+import www.j1stiot.cn.concurrency.annoations.NotRecommend;
+import www.j1stiot.cn.concurrency.annoations.ThreadSafe;
 
 /**
  * 懒汉模式
  * 单例实例在第一次使用时进行创建
+ *
  */
 @ThreadSafe
 @NotRecommend
@@ -19,7 +21,7 @@ public class SingletonExample3 {
 
     }
 
-    // 静态的工厂方法
+    // 静态的工厂方法 添加同步修饰 保证线程安全，作用于整个类
     public static synchronized SingletonExample3 getInstance() {
         if (instance == null) {
             instance = new SingletonExample3();

@@ -1,6 +1,6 @@
 package www.j1stiot.cn.concurrency.example.syncContainer;
 
-import com.mmall.concurrency.annoations.NotThreadSafe;
+import www.j1stiot.cn.concurrency.annoations.NotThreadSafe;
 
 import java.util.Vector;
 

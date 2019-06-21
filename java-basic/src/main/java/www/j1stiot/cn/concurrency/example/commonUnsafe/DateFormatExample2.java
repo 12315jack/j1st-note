@@ -1,7 +1,8 @@
 package www.j1stiot.cn.concurrency.example.commonUnsafe;
 
-import com.mmall.concurrency.annoations.ThreadSafe;
+
 import lombok.extern.slf4j.Slf4j;
+import www.j1stiot.cn.concurrency.annoations.ThreadSafe;
 
 import java.text.SimpleDateFormat;
 import java.util.concurrent.CountDownLatch;

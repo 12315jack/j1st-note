@@ -1,8 +1,8 @@
 package www.j1stiot.cn.concurrency;
 
-import com.mmall.concurrency.example.threadLocal.RequestHolder;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.web.servlet.handler.HandlerInterceptorAdapter;
+import www.j1stiot.cn.concurrency.example.threadLocal.RequestHolder;
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;

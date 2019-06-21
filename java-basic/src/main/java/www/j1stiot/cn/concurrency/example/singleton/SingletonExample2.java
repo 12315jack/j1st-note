@@ -1,10 +1,12 @@
 package www.j1stiot.cn.concurrency.example.singleton;
 
-import com.mmall.concurrency.annoations.ThreadSafe;
+
+import www.j1stiot.cn.concurrency.annoations.ThreadSafe;
 
 /**
  * 饿汉模式
  * 单例实例在类装载时进行创建
+ * 线程安全的类
  */
 @ThreadSafe
 public class SingletonExample2 {

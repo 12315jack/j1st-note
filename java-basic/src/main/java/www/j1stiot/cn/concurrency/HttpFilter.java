@@ -1,7 +1,8 @@
 package www.j1stiot.cn.concurrency;
 
-import com.mmall.concurrency.example.threadLocal.RequestHolder;
+
 import lombok.extern.slf4j.Slf4j;
+import www.j1stiot.cn.concurrency.example.threadLocal.RequestHolder;
 
 import javax.servlet.Filter;
 import javax.servlet.FilterChain;

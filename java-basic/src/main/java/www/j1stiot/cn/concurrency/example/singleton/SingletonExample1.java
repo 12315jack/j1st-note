@@ -1,10 +1,12 @@
 package www.j1stiot.cn.concurrency.example.singleton;
 
-import com.mmall.concurrency.annoations.NotThreadSafe;
+
+import www.j1stiot.cn.concurrency.annoations.NotThreadSafe;
 
 /**
  * 懒汉模式
  * 单例实例在第一次使用时进行创建
+ * 非线程安全的类
  */
 @NotThreadSafe
 public class SingletonExample1 {

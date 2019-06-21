@@ -1,7 +1,7 @@
 package www.j1stiot.cn.concurrency.example.concurrent;
 
-import com.mmall.concurrency.annoations.ThreadSafe;
 import lombok.extern.slf4j.Slf4j;
+import www.j1stiot.cn.concurrency.annoations.ThreadSafe;
 
 import java.util.ArrayList;
 import java.util.List;

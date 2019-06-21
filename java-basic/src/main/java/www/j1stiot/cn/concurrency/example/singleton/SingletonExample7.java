@@ -1,7 +1,7 @@
 package www.j1stiot.cn.concurrency.example.singleton;
 
-import com.mmall.concurrency.annoations.Recommend;
-import com.mmall.concurrency.annoations.ThreadSafe;
+import www.j1stiot.cn.concurrency.annoations.Recommend;
+import www.j1stiot.cn.concurrency.annoations.ThreadSafe;
 
 /**
  * 枚举模式：最安全

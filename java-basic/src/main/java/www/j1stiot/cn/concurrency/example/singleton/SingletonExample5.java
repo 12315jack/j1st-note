@@ -1,6 +1,6 @@
 package www.j1stiot.cn.concurrency.example.singleton;
 
-import com.mmall.concurrency.annoations.ThreadSafe;
+import www.j1stiot.cn.concurrency.annoations.ThreadSafe;
 
 /**
  * 懒汉模式 -》 双重同步锁单例模式

@@ -1,8 +1,8 @@
 package www.j1stiot.cn.concurrency.example.publish;
 
-import com.mmall.concurrency.annoations.NotRecommend;
-import com.mmall.concurrency.annoations.NotThreadSafe;
 import lombok.extern.slf4j.Slf4j;
+import www.j1stiot.cn.concurrency.annoations.NotRecommend;
+import www.j1stiot.cn.concurrency.annoations.NotThreadSafe;
 
 @Slf4j
 @NotThreadSafe

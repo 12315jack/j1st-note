@@ -3,7 +3,8 @@ package www.j1stiot.cn.concurrency.example.immutable;
 import com.google.common.collect.ImmutableList;
 import com.google.common.collect.ImmutableMap;
 import com.google.common.collect.ImmutableSet;
-import com.mmall.concurrency.annoations.ThreadSafe;
+import www.j1stiot.cn.concurrency.annoations.ThreadSafe;
+
 
 @ThreadSafe
 public class ImmutableExample3 {

@@ -1,7 +1,7 @@
 package www.j1stiot.cn.concurrency.example.commonUnsafe;
 
-import com.mmall.concurrency.annoations.NotThreadSafe;
 import lombok.extern.slf4j.Slf4j;
+import www.j1stiot.cn.concurrency.annoations.NotThreadSafe;
 
 import java.util.HashMap;
 import java.util.Map;
