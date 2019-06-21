@@ -9,5 +9,30 @@ repositories {
 }
 
 dependencies {
+    
     testCompile group: 'junit', name: 'junit', version: '4.12'
+    
+    //spring boot
+    compile 'org.springframework.boot:spring-boot-starter-parent:2.1.6.RELEASE'
+    compile("org.springframework.boot:spring-boot-starter-web:2.1.6.RELEASE")
+    compile("org.springframework.boot:spring-boot-starter-actuator:2.1.6.RELEASE")
+    
+    //lombok
+    compile("org.projectlombok:lombok:1.18.8")
+    
+    //guava
+    compile("com.google.guava:guava-parent:28.0-jre")
+    compile("com.google.guava:guava:28.0-jre")
+    
+    //joda time
+    compile("joda-time:joda-time:2.10.2")
+    
+    //redis client
+    compile("redis.clients:jedis:3.1.0-m3")
+
+    //hystrix and hystrix dashboard
+    compile("org.springframework.cloud:spring-cloud-starter-hystrix:1.4.7.RELEASE")
+    compile("org.springframework.cloud:spring-cloud-starter-hystrix-dashboard:1.4.7.RELEASE")
+    
+    
 }
