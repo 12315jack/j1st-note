@@ -25,12 +25,11 @@ public class StringDemo {
         // 对象地址值比较
         String str2 = new String("hello");
 
-        System.out.println("地址值 str1 和 str2 是否相等：" + (str1 == str2));
-        System.out.println("对象内容 str1 和 str2 是否相等：" + str1.equals(str2));
+        System.out.println("地址值 str1 和 str2 是否相等：" + (str1 == str2));//false
+        System.out.println("对象内容 str1 和 str2 是否相等：" + str1.equals(str2));//true
 
         System.out.println("hashcode str1 值：" + str1.hashCode());
         System.out.println("hashcode str2 值：" + str2.hashCode());
-
 
     }
 

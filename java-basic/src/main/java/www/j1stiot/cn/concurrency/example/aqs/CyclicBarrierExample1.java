@@ -6,6 +6,19 @@ import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+/**
+ * 同步辅助类
+ * 允许一组线程相互等待，通过它可以完成多线程之间的相互等待，只有当每个线程都准备就绪后才能各自继续往下操作
+ *
+ *
+ * CyclicBarrier 与 CountDownLatch的区别
+ *
+ *  1.CyclicBarrier 计数器可以通过reset方法重复使用，CountDownLatch计数器只能使用一次
+ *  2.CountDownLatch实现一个或者n个线程需要等待其他线程完成某项操作后才能继续往下执行，
+ *  CyclicBarrier 实现多个线程之间相互等待
+ *
+ *
+ */
 @Slf4j
 public class CyclicBarrierExample1 {
 

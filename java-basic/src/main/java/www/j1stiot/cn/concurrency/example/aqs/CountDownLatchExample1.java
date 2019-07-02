@@ -6,6 +6,14 @@ import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
+/**
+ * 线程不安全，多线程修改同一个静态变量时候，各个线程修改的数据
+ * 可能会发生数据覆盖
+ *
+ * CountLatch是一个同步辅助类，
+ *  给定一个计数器，原子操作，调用await()方法会阻塞进程，线程调用countDown，
+ *  使计数器的值减1，直到计数器值为0，才执行接下来的步骤
+ */
 @Slf4j
 public class CountDownLatchExample1 {
 

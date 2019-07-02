@@ -37,6 +37,8 @@ public class CountExample1 {
                 countDownLatch.countDown();
             });
         }
+
+        //阻塞所有线程，直到调用countDown
         countDownLatch.await();
         executorService.shutdown();
         log.info("count:{}", count);
@@ -45,4 +47,5 @@ public class CountExample1 {
     private static void add() {
         count++;
     }
+
 }
