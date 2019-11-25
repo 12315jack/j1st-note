@@ -38,7 +38,7 @@ public class SynchronizedExample1 {
     }
 
     /**
-     * 当 synchronized 修饰一个方法,作用域为当前调用
+     * 当 synchronized 修饰一个方法,作用域为当前调用对象
      * 不同调用对象相互不影响
      * 子类继承父类的时候无法获取 synchronized 修饰符，需要手动添加如果需要的话
      */

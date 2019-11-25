@@ -10,8 +10,6 @@ repositories {
 
 dependencies {
     
-    testCompile group: 'junit', name: 'junit', version: '4.12'
-    
     //spring boot
     compile 'org.springframework.boot:spring-boot-starter-parent:2.1.6.RELEASE'
     compile("org.springframework.boot:spring-boot-starter-web:2.1.6.RELEASE")
