@@ -32,8 +32,11 @@ public class VectorExample2 {
                     }
                 }
             };
+
+            //会跑出数组越界异常，由于多线程中线程执行顺序的问题，同一个位置的元素如果被先remove了，然后在get这个元素就会报数组越界问题
             thread1.start();
             thread2.start();
+
         }
     }
 }

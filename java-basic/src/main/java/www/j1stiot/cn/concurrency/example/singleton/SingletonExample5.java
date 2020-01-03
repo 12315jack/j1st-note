@@ -20,7 +20,6 @@ public class SingletonExample5 {
     private SingletonExample5() {
 
     }
-
     // 静态的工厂方法
     public static SingletonExample5 getInstance() {
         if (instance == null) { // 双重检测机制        // B
