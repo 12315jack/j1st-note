@@ -9,14 +9,14 @@ import com.itextpdf.text.pdf.PdfPTable;
 import com.itextpdf.text.pdf.PdfWriter;
 import org.springframework.stereotype.Component;
 import org.springframework.web.bind.annotation.RequestMapping;
-import sun.misc.BASE64Decoder;
+
 
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
 
 import java.awt.*;
 import java.io.*;
-import java.net.MalformedURLException;
+import java.util.Base64;
 
 @Component
 public class Demo2 {
@@ -26,7 +26,7 @@ public class Demo2 {
      * 导出PDF start
      */
     @RequestMapping("exportPDF")
-    public void exportPDF(HttpServletRequest request, HttpServletResponse response, String base64Info) throws MalformedURLException, IOException, DocumentException, com.lowagie.text.DocumentException {
+    public void exportPDF(HttpServletRequest request, HttpServletResponse response, String base64Info) throws Exception {
 
         String urlAdress =request.getSession().getServletContext().getRealPath("/");   //获取项目web根目录  如要保存在项目里exportFilePath=urlAdress
         String newFileName;
@@ -35,12 +35,11 @@ public class Demo2 {
         String newPngName = newFileName.replaceFirst(".pdf", ".png");
         String exportFilePath = "d:/export";
         base64Info = base64Info.replaceAll(" ", "+");
-        BASE64Decoder decoder = new BASE64Decoder();
         String[] arr = base64Info.split("base64,");
         byte[] buffer;
         try {
-            buffer = decoder.decodeBuffer(arr[1]);
-        } catch (IOException e) {
+            buffer = Base64.getDecoder().decode(arr[1]);
+        } catch (Exception e) {
             throw new RuntimeException();
         }
         OutputStream output = null;
@@ -88,7 +87,7 @@ public class Demo2 {
     }
 
     //通过png文件来生成pdf文件
-    public File Pdf(String imagePath, String mOutputPdfFileName) throws com.lowagie.text.DocumentException, MalformedURLException, IOException, DocumentException {
+    public File Pdf(String imagePath, String mOutputPdfFileName) throws Exception {
         //建立com.lowagie.text.Document对象的实例。(A4纸,左右上下边距)
         Document document = new Document(PageSize.A4, 10, 10, 20, 20);
         //add Chinese font 需要 下载远东字体包iTextAsian.jar

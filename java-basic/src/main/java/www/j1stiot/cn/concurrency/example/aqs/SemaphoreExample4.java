@@ -1,6 +1,8 @@
 package www.j1stiot.cn.concurrency.example.aqs;
 
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -9,6 +11,9 @@ import java.util.concurrent.TimeUnit;
 
 @Slf4j
 public class SemaphoreExample4 {
+
+    // logger
+    private static final Logger log = LoggerFactory.getLogger(SemaphoreExample4.class);
 
     private final static int threadCount = 20;
 

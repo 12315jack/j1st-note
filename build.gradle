@@ -12,9 +12,6 @@ subprojects {
     // JDK
     sourceCompatibility = 1.8
 
-    // Encoding
-    tasks.withType(JavaCompile) { options.encoding = 'UTF-8' }
-
     // Maven Repository
     repositories {
         mavenLocal();

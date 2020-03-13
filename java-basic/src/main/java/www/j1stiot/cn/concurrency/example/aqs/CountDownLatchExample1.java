@@ -1,6 +1,9 @@
 package www.j1stiot.cn.concurrency.example.aqs;
 
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import www.j1stiot.cn.concurrency.example.hystrix.HystrixController1;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
@@ -17,7 +20,10 @@ import java.util.concurrent.Executors;
 @Slf4j
 public class CountDownLatchExample1 {
 
-    private final static int threadCount = 200;
+    // logger
+    private static final Logger log = LoggerFactory.getLogger(CountDownLatchExample1.class);
+
+    private final static int threadCount = 20;
 
     public static void main(String[] args) throws Exception {
 

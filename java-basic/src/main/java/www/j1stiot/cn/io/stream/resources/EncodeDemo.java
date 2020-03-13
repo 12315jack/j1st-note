@@ -14,7 +14,7 @@ public class EncodeDemo {
         byte[] byte1=s.getBytes();
         for(byte b:byte1){
             //把字节转换int以十六进制方式显示
-            System.out.print(Integer.toHexString(b & 0xff) +" ");
+            System.out.print(Integer.toHexString(b & 0xff) +"");
         }
         System.out.println();
 

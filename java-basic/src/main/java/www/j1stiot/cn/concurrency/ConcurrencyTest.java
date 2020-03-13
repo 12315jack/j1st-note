@@ -1,7 +1,10 @@
 package www.j1stiot.cn.concurrency;
 
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import www.j1stiot.cn.concurrency.annoations.NotThreadSafe;
+import www.j1stiot.cn.concurrency.example.aqs.CountDownLatchExample1;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
@@ -11,6 +14,9 @@ import java.util.concurrent.Semaphore;
 @Slf4j
 @NotThreadSafe
 public class ConcurrencyTest {
+
+    // logger
+    private static final Logger log = LoggerFactory.getLogger(ConcurrencyTest.class);
 
     // 请求总数
     public static int clientTotal = 5000;

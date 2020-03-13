@@ -3,6 +3,4 @@ rootProject.name = 'j1st-note'
 include 'java-basic'
 include 'java-database'
 include 'linux-basic'
-include 'gradle-basic'
-include 'spring-basic'
 

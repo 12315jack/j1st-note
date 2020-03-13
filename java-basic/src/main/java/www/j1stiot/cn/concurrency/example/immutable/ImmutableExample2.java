@@ -1,15 +1,18 @@
 package www.j1stiot.cn.concurrency.example.immutable;
 
 import com.google.common.collect.Maps;
-import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import www.j1stiot.cn.concurrency.annoations.ThreadSafe;
 
 import java.util.Collections;
 import java.util.Map;
 
-@Slf4j
 @ThreadSafe
 public class ImmutableExample2 {
+
+    // logger
+    private static final Logger log= LoggerFactory.getLogger(ImmutableExample2.class);
 
     private static Map<Integer, Integer> map = Maps.newHashMap();
 

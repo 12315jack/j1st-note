@@ -1,12 +1,17 @@
 package www.j1stiot.cn.concurrency.example.aqs;
 
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.FutureTask;
 
 @Slf4j
 public class FutureTaskExample {
+
+    // logger
+    private static final Logger log = LoggerFactory.getLogger(FutureTaskExample.class);
 
     public static void main(String[] args) throws Exception {
         FutureTask<String> futureTask = new FutureTask<String>(new Callable<String>() {

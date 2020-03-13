@@ -4,6 +4,8 @@ import com.netflix.hystrix.contrib.javanica.annotation.DefaultProperties;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -13,6 +15,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @RequestMapping("/hystrix2")
 @DefaultProperties(defaultFallback = "defaultFail")
 public class HystrixController2 {
+
+    // logger
+    private static final Logger logger = LoggerFactory.getLogger(HystrixController2.class);
 
     @HystrixCommand(commandProperties = {
             @HystrixProperty(name = "execution.isolation.thread.timeoutInMilliseconds", value = "500")
@@ -42,7 +47,7 @@ public class HystrixController2 {
     }
 
     private String defaultFail() {
-        log.warn("default fail");
+        logger.warn("default fail");
         return "default fail";
     }
 }

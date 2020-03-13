@@ -1,6 +1,8 @@
 package www.j1stiot.cn.concurrency.example.aqs;
 
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.ExecutorService;
@@ -9,6 +11,9 @@ import java.util.concurrent.Future;
 
 @Slf4j
 public class FutureExample {
+
+    // logger
+    private static final Logger log = LoggerFactory.getLogger(FutureExample.class);
 
     public static void main(String[] args) throws Exception {
         ExecutorService executorService = Executors.newCachedThreadPool();

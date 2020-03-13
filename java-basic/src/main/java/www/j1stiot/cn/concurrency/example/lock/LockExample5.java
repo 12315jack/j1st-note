@@ -1,6 +1,8 @@
 package www.j1stiot.cn.concurrency.example.lock;
 
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import www.j1stiot.cn.concurrency.annoations.ThreadSafe;
 
 import java.util.concurrent.CountDownLatch;
@@ -12,6 +14,9 @@ import java.util.concurrent.locks.StampedLock;
 @Slf4j
 @ThreadSafe
 public class LockExample5 {
+
+    // logger
+    private static final Logger log = LoggerFactory.getLogger(LockExample5.class);
 
     private final static StampedLock lock = new StampedLock();
     // 请求总数

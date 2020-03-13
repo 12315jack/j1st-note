@@ -1,6 +1,8 @@
 package www.j1stiot.cn.concurrency.example.aqs;
 
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
@@ -10,7 +12,10 @@ import java.util.concurrent.TimeUnit;
 @Slf4j
 public class CountDownLatchExample2 {
 
-    private final static int threadCount = 200;
+    // logger
+    private static final Logger log = LoggerFactory.getLogger(CountDownLatchExample2.class);
+
+    private final static int threadCount = 20;
 
     public static void main(String[] args) throws Exception {
 

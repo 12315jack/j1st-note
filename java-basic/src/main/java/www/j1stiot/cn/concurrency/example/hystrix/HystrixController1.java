@@ -3,6 +3,8 @@ package www.j1stiot.cn.concurrency.example.hystrix;
 import com.netflix.hystrix.contrib.javanica.annotation.DefaultProperties;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
@@ -13,6 +15,9 @@ import org.springframework.web.bind.annotation.ResponseBody;
 @DefaultProperties(defaultFallback = "defaultFail")
 public class HystrixController1 {
 
+    // logger
+    private static final Logger logger = LoggerFactory.getLogger(HystrixController1.class);
+
     @HystrixCommand(fallbackMethod = "fail1")
     @RequestMapping("/test1")
     @ResponseBody
@@ -21,7 +26,7 @@ public class HystrixController1 {
     }
 
     private String fail1() {
-        log.warn("fail1");
+        logger.warn("fail1");
         return "fail1";
     }
 
@@ -34,18 +39,18 @@ public class HystrixController1 {
 
     @HystrixCommand(fallbackMethod = "fail3")
     private String fail2() {
-        log.warn("fail2");
+        logger.warn("fail2");
         throw new RuntimeException();
     }
 
     @HystrixCommand
     private String fail3() {
-        log.warn("fail3");
+        logger.warn("fail3");
         throw new RuntimeException();
     }
 
     private String defaultFail() {
-        log.warn("default fail");
+        logger.warn("default fail");
         return "default fail";
     }
 }
