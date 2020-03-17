@@ -88,14 +88,11 @@ public class AlgorithmDemo {
         if (low < high) {
             //将numbers数组进行一分为二
             int middle = getMiddle(numbers, low, high);
-
             //对低字段表进行递归排序
             quickSort(numbers, low, middle - 1);
-
             //对高字段表进行递归排序
             quickSort(numbers, middle + 1, high);
         }
-
     }
 
 

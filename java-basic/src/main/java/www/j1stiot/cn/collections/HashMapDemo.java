@@ -1,7 +1,6 @@
-package www.j1stiot.cn.collection;
+package www.j1stiot.cn.collections;
 
 import java.util.HashMap;
-import java.util.Map;
 import java.util.concurrent.ConcurrentHashMap;
 
 /**
