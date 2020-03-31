@@ -4,6 +4,7 @@ package www.j1stiot.cn.concurrency.example.atomic;
 import lombok.extern.slf4j.Slf4j;
 import www.j1stiot.cn.concurrency.annoations.ThreadSafe;
 
+import java.lang.reflect.InvocationHandler;
 import java.util.concurrent.CountDownLatch;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
