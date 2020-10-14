@@ -17,7 +17,6 @@ import java.util.concurrent.Executors;
  *  给定一个计数器，原子操作，调用await()方法会阻塞进程，线程调用countDown，
  *  使计数器的值减1，直到计数器值为0，才执行接下来的步骤
  */
-@Slf4j
 public class CountDownLatchExample1 {
 
     // logger

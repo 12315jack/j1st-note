@@ -1,6 +1,9 @@
 package www.j1stiot.cn.concurrency.example.deadLock;
 
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import www.j1stiot.cn.concurrency.example.count.CountExample1;
 
 /**
  * 一个简单的死锁类
@@ -11,8 +14,11 @@ import lombok.extern.slf4j.Slf4j;
  * td1、td2相互等待，都需要得到对方锁定的资源才能继续执行，从而死锁。
  */
 
-@Slf4j
 public class DeadLock implements Runnable {
+
+    //Logger
+    private static final Logger log = LoggerFactory.getLogger(DeadLock.class);
+
     //静态对象是类的所有对象共享的
     private static Object o1 = new Object(), o2 = new Object();
     public int flag = 1;

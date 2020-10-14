@@ -4,16 +4,20 @@ import com.netflix.hystrix.contrib.javanica.annotation.DefaultProperties;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixCommand;
 import com.netflix.hystrix.contrib.javanica.annotation.HystrixProperty;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-@Slf4j
 @Controller
 @RequestMapping("/hystrix3")
 @DefaultProperties(defaultFallback = "defaultFail")
 public class HystrixController3 {
+
+    // logger
+    private static final Logger log = LoggerFactory.getLogger(HystrixController3.class);
 
     @HystrixCommand(commandProperties = {
             @HystrixProperty(name = "circuitBreaker.enabled", value = "true"),  //  熔断器在整个统计时间内是否开启的阀值

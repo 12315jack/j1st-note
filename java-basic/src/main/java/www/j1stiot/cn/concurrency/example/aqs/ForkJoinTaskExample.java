@@ -8,7 +8,6 @@ import java.util.concurrent.ForkJoinPool;
 import java.util.concurrent.Future;
 import java.util.concurrent.RecursiveTask;
 
-@Slf4j
 public class ForkJoinTaskExample extends RecursiveTask<Integer> {
 
     // logger

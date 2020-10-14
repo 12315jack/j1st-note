@@ -3,14 +3,18 @@ package www.j1stiot.cn.concurrency.example.atomic;
 
 import lombok.Getter;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import www.j1stiot.cn.concurrency.annoations.ThreadSafe;
 
 import java.util.concurrent.atomic.AtomicIntegerFieldUpdater;
 import java.util.concurrent.atomic.AtomicReference;
 
-@Slf4j
 @ThreadSafe
 public class AtomicExample5 {
+
+    //Logger
+    private static final Logger log = LoggerFactory.getLogger(AtomicExample5.class);
 
     private static AtomicIntegerFieldUpdater<AtomicExample5> updater =
             AtomicIntegerFieldUpdater.newUpdater(AtomicExample5.class, "count");

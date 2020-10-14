@@ -10,7 +10,7 @@ subprojects {
     version 'V1.0.0'
 
     // JDK
-    sourceCompatibility = 1.8
+    sourceCompatibility = 1.11
 
     // Maven Repository
     repositories {

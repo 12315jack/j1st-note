@@ -7,7 +7,6 @@ import org.slf4j.LoggerFactory;
 import java.util.concurrent.Callable;
 import java.util.concurrent.FutureTask;
 
-@Slf4j
 public class FutureTaskExample {
 
     // logger

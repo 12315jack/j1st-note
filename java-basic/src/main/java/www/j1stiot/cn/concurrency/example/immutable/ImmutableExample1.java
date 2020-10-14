@@ -9,7 +9,6 @@ import www.j1stiot.cn.concurrency.example.hystrix.HystrixController2;
 
 import java.util.Map;
 
-@Slf4j
 @NotThreadSafe
 public class ImmutableExample1 {
 

@@ -21,7 +21,6 @@ import java.util.concurrent.Executors;
  *
  *
  */
-@Slf4j
 public class CyclicBarrierExample1 {
 
     // logger

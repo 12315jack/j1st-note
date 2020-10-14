@@ -10,7 +10,6 @@ import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.ResponseBody;
 
-@Slf4j
 @Controller
 @RequestMapping("/hystrix2")
 @DefaultProperties(defaultFallback = "defaultFail")

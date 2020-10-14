@@ -8,7 +8,6 @@ import java.util.concurrent.CyclicBarrier;
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-@Slf4j
 public class CyclicBarrierExample3 {
 
     // logger
