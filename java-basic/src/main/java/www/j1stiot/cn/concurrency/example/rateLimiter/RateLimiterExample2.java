@@ -2,11 +2,16 @@ package www.j1stiot.cn.concurrency.example.rateLimiter;
 
 import com.google.common.util.concurrent.RateLimiter;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import www.j1stiot.cn.concurrency.example.publish.UnsafePublish;
 
 import java.util.concurrent.TimeUnit;
 
-@Slf4j
 public class RateLimiterExample2 {
+
+    //Logger
+    private static final Logger log = LoggerFactory.getLogger(RateLimiterExample2.class);
 
     private static RateLimiter rateLimiter = RateLimiter.create(5);
 

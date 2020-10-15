@@ -2,7 +2,10 @@ package www.j1stiot.cn.concurrency.example.syncContainer;
 
 import com.google.common.collect.Lists;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import www.j1stiot.cn.concurrency.annoations.ThreadSafe;
+import www.j1stiot.cn.concurrency.example.sync.SynchronizedExample2;
 
 import java.util.Collections;
 import java.util.List;
@@ -12,9 +15,11 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
 
-@Slf4j
 @ThreadSafe
 public class CollectionsExample1 {
+
+    //Logger
+    private static final Logger log = LoggerFactory.getLogger(CollectionsExample1.class);
 
     // 请求总数
     public static int clientTotal = 5000;

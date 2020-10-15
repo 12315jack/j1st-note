@@ -1,6 +1,8 @@
 package www.j1stiot.cn.concurrency.example.commonUnsafe;
 
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import www.j1stiot.cn.concurrency.annoations.NotThreadSafe;
 
 import java.util.HashSet;
@@ -10,9 +12,11 @@ import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 import java.util.concurrent.Semaphore;
 
-@Slf4j
 @NotThreadSafe
 public class HashSetExample {
+
+    //Logger
+    private static final Logger log = LoggerFactory.getLogger(HashSetExample.class);
 
     // 请求总数
     public static int clientTotal = 5000;

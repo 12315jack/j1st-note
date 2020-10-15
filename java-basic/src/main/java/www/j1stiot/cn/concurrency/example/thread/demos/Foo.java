@@ -20,10 +20,10 @@ public class Foo {
             while( flag != 1){
                 lock.wait();
             }
-            // printFirst.run() outputs "first". Do not change or remove this line.
+
             printFirst.run();
-            //定义成员变量为 1
-            flag = 1;
+            //定义成员变量为 2
+            flag = 2;
             //唤醒其余所有的线程
             lock.notifyAll();
         }
@@ -36,8 +36,8 @@ public class Foo {
             }
             // printSecond.run() outputs "second". Do not change or remove this line.
             printSecond.run();
-            //如果成员变量为 1 ，则代表first线程刚执行完，所以执行second，并且改变成员变量为 2
-            flag = 2;
+            //如果成员变量为 2 ，则代表first线程刚执行完，所以执行second，并且改变成员变量为 3
+            flag = 3;
             //唤醒其余所有的线程
             lock.notifyAll();
         }
@@ -49,9 +49,9 @@ public class Foo {
                 lock.wait();
             }
             // printThird.run() outputs "third". Do not change or remove this line.
-            //如果成员变量为 2 ，则代表second线程刚执行完，所以执行third，并且改变成员变量为 0
+            //如果成员变量为 3 ，则代表second线程刚执行完，所以执行third，并且改变成员变量为 1
             printThird.run();
-            flag = 0;
+            flag = 1;
             lock.notifyAll();
         }
     }

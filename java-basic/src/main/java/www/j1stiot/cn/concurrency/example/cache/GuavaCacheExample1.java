@@ -4,11 +4,16 @@ import com.google.common.cache.CacheBuilder;
 import com.google.common.cache.CacheLoader;
 import com.google.common.cache.LoadingCache;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import www.j1stiot.cn.concurrency.example.atomic.AtomicExample5;
 
 import java.util.concurrent.TimeUnit;
 
-@Slf4j
 public class GuavaCacheExample1 {
+
+    //Logger
+    private static final Logger log = LoggerFactory.getLogger(GuavaCacheExample1.class);
 
     public static void main(String[] args) {
 

@@ -1,6 +1,9 @@
 package www.j1stiot.cn.concurrency.example.sync;
 
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
+import www.j1stiot.cn.concurrency.example.rateLimiter.RateLimiterExample2;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
@@ -8,8 +11,10 @@ import java.util.concurrent.Executors;
 /**
  * synchronized 修饰一个静态方法和修饰一个类效果一样
  */
-@Slf4j
 public class SynchronizedExample2 {
+
+    //Logger
+    private static final Logger log = LoggerFactory.getLogger(SynchronizedExample2.class);
 
     // 修饰一个类
     public static void test1(int j) {

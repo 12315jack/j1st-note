@@ -1,13 +1,17 @@
 package www.j1stiot.cn.concurrency.example.publish;
 
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import www.j1stiot.cn.concurrency.annoations.NotThreadSafe;
 
 import java.util.Arrays;
 
-@Slf4j
 @NotThreadSafe
 public class UnsafePublish {
+
+    //Logger
+    private static final Logger log = LoggerFactory.getLogger(UnsafePublish.class);
 
     private String[] states = {"a", "b", "c"};
 

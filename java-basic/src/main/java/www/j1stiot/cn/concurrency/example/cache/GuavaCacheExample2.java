@@ -3,12 +3,17 @@ package www.j1stiot.cn.concurrency.example.cache;
 import com.google.common.cache.Cache;
 import com.google.common.cache.CacheBuilder;
 import lombok.extern.slf4j.Slf4j;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.Callable;
 import java.util.concurrent.TimeUnit;
 
 @Slf4j
 public class GuavaCacheExample2 {
+
+    //Logger
+    private static final Logger log = LoggerFactory.getLogger(GuavaCacheExample2.class);
 
     public static void main(String[] args) {
 

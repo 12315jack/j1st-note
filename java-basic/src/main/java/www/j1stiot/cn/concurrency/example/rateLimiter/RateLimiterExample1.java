@@ -7,11 +7,8 @@ import org.slf4j.LoggerFactory;
 
 import java.util.concurrent.TimeUnit;
 
-@Slf4j
 public class RateLimiterExample1 {
 
-    //logger
-    Logger logger= LoggerFactory.getLogger(RateLimiterExample1.class);
 
     /**
      * 应用限流：
@@ -31,6 +28,6 @@ public class RateLimiterExample1 {
     }
 
     private static void handle(int i) {
-        log.info("{}", i);
+        System.out.print("{}"+i);
     }
 }

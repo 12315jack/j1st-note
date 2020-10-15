@@ -19,8 +19,15 @@ public class AtomicExample5 {
     private static AtomicIntegerFieldUpdater<AtomicExample5> updater =
             AtomicIntegerFieldUpdater.newUpdater(AtomicExample5.class, "count");
 
-    @Getter
     public volatile int count = 100;
+
+    public int getCount() {
+        return count;
+    }
+
+    public void setCount(int count) {
+        this.count = count;
+    }
 
     public static void main(String[] args) {
 
