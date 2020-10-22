@@ -1,14 +1,11 @@
 package www.j1stiot.cn.concurrency.example.threadPool;
 
-import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
-import www.j1stiot.cn.concurrency.example.lock.LockExample1;
 
 import java.util.concurrent.ExecutorService;
 import java.util.concurrent.Executors;
 
-@Slf4j
 public class ThreadPoolExample1 {
 
     // logger
