@@ -1,7 +1,5 @@
 package www.j1stiot.cn.concurrency.example.lock;
 
-
-import lombok.extern.slf4j.Slf4j;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import www.j1stiot.cn.concurrency.annoations.ThreadSafe;
@@ -13,7 +11,6 @@ import java.util.concurrent.Semaphore;
 import java.util.concurrent.locks.Lock;
 import java.util.concurrent.locks.ReentrantLock;
 
-@Slf4j
 @ThreadSafe
 public class LockExample2 {
 
