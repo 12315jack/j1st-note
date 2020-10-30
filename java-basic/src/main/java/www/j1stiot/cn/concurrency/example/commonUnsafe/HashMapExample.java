@@ -4,12 +4,10 @@ import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import www.j1stiot.cn.concurrency.annoations.NotThreadSafe;
 
+import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
-import java.util.concurrent.CountDownLatch;
-import java.util.concurrent.ExecutorService;
-import java.util.concurrent.Executors;
-import java.util.concurrent.Semaphore;
+import java.util.concurrent.*;
 
 @NotThreadSafe
 public class HashMapExample {
@@ -26,6 +24,7 @@ public class HashMapExample {
     private static Map<Integer, Integer> map = new HashMap<>();
 
     public static void main(String[] args) throws Exception {
+
         ExecutorService executorService = Executors.newCachedThreadPool();
         final Semaphore semaphore = new Semaphore(threadTotal);
         final CountDownLatch countDownLatch = new CountDownLatch(clientTotal);

@@ -7,7 +7,6 @@ public class ConstantPool {
 
 
     public static void main(String[] args) {
-
 //        String s = new String("1");
 //        String ss=s.intern();
 //        //false
